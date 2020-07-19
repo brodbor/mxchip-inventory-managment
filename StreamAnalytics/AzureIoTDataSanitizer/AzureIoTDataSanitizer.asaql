@@ -1,0 +1,34 @@
+WITH AnomalyDetectionStep AS (
+	     SELECT
+	        EventEnqueuedUtcTime as time,
+		    IoTHub.ConnectionDeviceId as deviceId,
+	        Volume, 
+	        AnomalyDetection_SpikeAndDip((Volume), 95,30, 'spikesanddips')
+	        OVER(LIMIT DURATION(second,30)) AS SpikeAndDipScores
+	    FROM IoTHubInput
+	), 
+	SensorData as
+	(
+	SELECT 
+			Volume,
+		    IoTHub.ConnectionDeviceId as DeviceId,
+	        EventEnqueuedUtcTime as time,
+			'Device' as type
+	
+	FROM IoTHubInput
+	union
+	SELECT 
+	     Volume,
+		 DeviceId,
+		 time     ,
+		 'Stream' as type       
+	FROM AnomalyDetectionStep
+	WHERE CAST(GetRecordPropertyValue(SpikeAndDipScores, 'IsAnomaly') AS BIGINT) = 0
+	)
+	
+
+	
+	
+	
+
+	

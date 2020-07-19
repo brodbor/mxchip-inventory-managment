@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "path": "Device"
+        },
+        {
+            "name": "AzureIoTDataSanitizer",
+            "path": "StreamAnalytics\\AzureIoTDataSanitizer"
+        },
+        {
+            "name": "mxchip-inventory-managment",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "IoTWorkbench.BoardId": "devkit",
+        "IoTWorkbench.DevicePath": "Device"
+    }
+}

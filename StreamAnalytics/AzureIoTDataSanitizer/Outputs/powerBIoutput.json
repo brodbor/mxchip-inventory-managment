@@ -1,0 +1,13 @@
+{
+    "Name": "powerBIoutput",
+    "DataSourceType": "Power BI",
+    "PowerBIProperties": {
+        "GroupName": "[Required]",
+        "GroupId": "[Required]",
+        "Dataset": "[Required]",
+        "Table": "[Required]",
+        "AuthenticationMode": "Msi"
+    },
+    "Serialization": null,
+    "ScriptType": "Output"
+}
