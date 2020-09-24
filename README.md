@@ -18,7 +18,7 @@ The below GIF shows real-time stream data in Power BI. The green line represents
 5. Visual Studio Code with number of extensions. Please check this [guide](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started) for additional details
 ##  Hardware
 
-![Image](http://borisbrodsky.com/wp-content/uploads/2020/07/board_map-1024x664.png)
+![](http://borisbrodsky.com/wp-content/uploads/2020/07/board_map.png)
 
 Connect breakout board to your sonar sensor as shown on the above diagram. I selected to use Analog input 5 that maps to connector 4 on Keyestudio board.
 
@@ -52,7 +52,7 @@ In this tutorial, we will create three Azure components: IoT Hub, Stream Analyti
 2. login to powerbi.com and select Workplaces and click on create new.
 3. Configure Power BI output. Open "powerBIoutput.json" file and update it with your Power BI details
 
-![](http://borisbrodsky.com/wp-content/uploads/2020/07/asa-configuration.gif)
+![](http://borisbrodsky.com/wp-content/uploads/2020/07/board_map.png)
 
 4. Deploy Stream Analytics to Azure subscription. Click F1 and type "**ASA: Submit to Azure**". Follow guided steps to provision the instance.
 5. Test deployment by executing Job locally. Navigate to the .asaql file, right-click and select "ASA: Start Local Run"
